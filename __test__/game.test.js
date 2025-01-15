@@ -5,7 +5,7 @@ describe('App', () => {
   it('Contains the compiled JavaScript', (done) => {
     fs.readFile('./public/main.js', 'utf8', (err, data) => {
       expect(err).toBe(null)
-      expect(data).toMatchSnapshot()
+      expect(data).toMatchSnapshot() // Ensure this matches the updated output
       done()
     })
   })
